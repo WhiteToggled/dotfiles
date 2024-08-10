@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
--- <cmd>split<CR> and <cmd>vsplit<CR> and then find out how to resize splits
+-- and then find out how to resize splits
 
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
@@ -27,3 +27,11 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})
 
 vim.keymap.set("n", "e", "<cmd>ene<CR>")
+
+vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+vim.keymap.set("n", "<C-S-Left>", "<C-w>>")
+vim.keymap.set("n", "<C-S-Right>", "<C-w><")
+vim.keymap.set("n", "<C-S-Down>", "<C-w>+")
+vim.keymap.set("n", "<C-S-Up>", "<C-w>-")

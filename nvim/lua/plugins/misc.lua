@@ -1,5 +1,7 @@
 return {
-	{ "tpope/vim-sleuth" },
+	{
+		"tpope/vim-sleuth",
+	},
 	{
 		"m4xshen/autoclose.nvim",
 		config = function()
