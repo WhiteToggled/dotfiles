@@ -10,6 +10,9 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Start starship.rs
 eval "$(starship init zsh)"
 
+# Shell Integrations
+eval "$(fzf --zsh)"
+
 # Pywal
 # cat ~/.cache/wal/sequences
 
@@ -17,9 +20,10 @@ eval "$(starship init zsh)"
 unsetopt PROMPT_SP
 
 # Plugins
-# zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 autoload -U compinit && compinit
 
@@ -51,5 +55,8 @@ setopt hist_ignore_all_dups
 setopt hist_find_no_dups
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+
 
 fastfetch
