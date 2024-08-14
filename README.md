@@ -2,9 +2,9 @@
 
 Current configurations written
 
-[x] Neovim
-[x] Zsh
-[x] Alacritty
-[x] Fastfetch
-[ ] tmux
+- [x] neovim 
+- [x] zsh 
+- [x] alacritty 
+- [x] fastfetch 
+- [ ] tmux 
 
