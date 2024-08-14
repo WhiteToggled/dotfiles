@@ -9,8 +9,10 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Start starship.rs
 eval "$(starship init zsh)"
+
 # Pywal
-cat ~/.cache/wal/sequences
+# cat ~/.cache/wal/sequences
+
 # Removes partial lines
 unsetopt PROMPT_SP
 
@@ -26,8 +28,11 @@ alias md='glow'
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
 alias shutdown='systemctl poweroff'
-alias dot="cd ~/dotfiles"
+alias dot="cd ~/dotfiles-git"
+alias dotedit="cd ~/dotfiles-git && $EDITOR"
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias c="clear"
+alias neofetch="fastfetch"
 
 bindkey -e
 bindkey '^p' history-search-backward
@@ -47,4 +52,4 @@ setopt hist_find_no_dups
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-nitch
+fastfetch
