@@ -9,10 +9,11 @@ vim.keymap.set("n", "<leader>cc", "<cmd>let &colorcolumn=80-&colorcolumn<CR>")
 
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
 
+vim.keymap.set('n', '<A-z>', '<cmd>set wrap!<CR>')
+
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
--- and then find out how to resize splits
 
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 
@@ -35,5 +36,3 @@ vim.keymap.set("n", "<C-S-Left>", "<C-w>>")
 vim.keymap.set("n", "<C-S-Right>", "<C-w><")
 vim.keymap.set("n", "<C-S-Down>", "<C-w>+")
 vim.keymap.set("n", "<C-S-Up>", "<C-w>-")
-
--- vim.keymap.set("n", "<C-/>", "gcc")

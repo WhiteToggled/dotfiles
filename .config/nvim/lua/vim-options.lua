@@ -4,7 +4,6 @@ vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
-vim.keymap.set('n', '<A-z>', '<cmd>set wrap!<CR>')
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
