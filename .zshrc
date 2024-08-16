@@ -14,7 +14,16 @@ eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 
 # Pywal
-# cat ~/.cache/wal/sequences
+# cat ~/.cache/'wal/sequences
+
+# yay -C
+function yay() {
+    if [[ $1 == "-C" ]]; then
+        command yay -R $(command yay -Qdtq)
+    else
+        command yay "$@"
+    fi
+}
 
 # ---------------------------------------
 #               PLUGINS
@@ -53,6 +62,8 @@ alias c='clear'
 alias neofetch='fastfetch'
 alias calculator='quich'
 alias md='glow'
+alias vim='nvim'
+alias v='nvim'
 
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
