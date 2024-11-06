@@ -1,6 +1,7 @@
 {
     "diagnostics.globals": [
         "vim",
-        "harpoon"
+        "harpoon",
+        "capabilites"
     ]
 }
