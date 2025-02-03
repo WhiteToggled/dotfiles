@@ -31,6 +31,18 @@ return {
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.pylsp.setup({
+				capabilities = capabilities,
+			})
+
+            -- local pid = vim.fn.getpid();
+            local omnisharp_path = "/home/whitetoggled/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll";
+			lspconfig.omnisharp.setup({
+                cmd = {"dotnet", omnisharp_path},
+                -- *.cs is only a workaround
+                root_dir = require("lspconfig.util").root_pattern('*.sln', '*.csproj', 'omnisharp.json', 'function.json'),
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

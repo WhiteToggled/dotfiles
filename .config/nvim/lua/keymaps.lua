@@ -9,18 +9,17 @@ vim.keymap.set("n", "<leader>cc", "<cmd>let &colorcolumn=80-&colorcolumn<CR>")
 
 vim.keymap.set("n", "<leader>pv", "<cmd>Ex<CR>")
 
-vim.keymap.set('n', '<A-z>', '<cmd>set wrap!<CR>')
+vim.keymap.set("n", "<A-z>", "<cmd>set wrap!<CR>")
 
 vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 
 vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-
 vim.keymap.set("n", "<leader>]", "<cmd>vsplit<CR>")
 vim.keymap.set("n", "<leader>[", "<cmd>split<CR>")
 
-vim.keymap.set("n", "<C-p>", ":Neotree toggle<CR>")
+vim.keymap.set("n", "<C-p>", "<cmd>Neotree toggle<CR>")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -29,6 +28,7 @@ vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})
 
 vim.keymap.set("n", "e", "<cmd>ene<CR>")
 
+vim.keymap.set("n", "<leader>y", "<cmd>y+<CR>")
 vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 
