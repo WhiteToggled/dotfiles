@@ -14,7 +14,7 @@ eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 
 # Pywal
-# cat ~/.cache/'wal/sequences
+# cat ~/.cache/wal/sequences
 
 # yay -C
 function yay() {
@@ -31,6 +31,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light MichaelAquilina/zsh-auto-notify
 # ---------------------------------------
 
 # ---------------------------------------
@@ -56,11 +57,21 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # ---------------------------------------
 
 # ---------------------------------------
+#               BINDINGS
+bindkey -e
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+# ---------------------------------------
+
+autoload -U compinit && compinit
+fastfetch
+
+# ---------------------------------------
 #               ALIASES
 alias shutdown='systemctl poweroff'
 alias c='clear'
 alias neofetch='fastfetch'
-alias calculator='quich'
+alias calculate='quich'
 alias md='glow'
 alias vim='nvim'
 alias v='nvim'
@@ -73,14 +84,4 @@ alias dotedit="cd ~/dotfiles-git && $EDITOR"
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias edit='fzf -m --preview="bat --color=always {}" --bind "enter:become(nvim {+})"'
 alias test-colors='curl -s https://raw.githubusercontent.com/JohnMorales/dotfiles/master/colors/24-bit-color.sh | bash'
-# ---------------------------------------
-
-# ---------------------------------------
-#               BINDINGS
-bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-# ---------------------------------------
-
-autoload -U compinit && compinit
-fastfetch
+alias ram="sudo dmidecode --type 17"
